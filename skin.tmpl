@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html $HTMLTagAttr>
+<head>
+  <title>{$Title} | {$Group} | $WikiTitle $ActionTitle</title>
+  <!-- Skin Copyright 2017-2022 Petko Yotov www.pmwiki.org/petko ; Skin License GNU GPLv2+ -->
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <link rel='stylesheet' href='$SkinDirUrl/skin.css' type='text/css' />
+  
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
+  <meta name="msapplication-TileColor" content="#ffffff" />
+  <meta name="theme-color" content="#ffffff" />
+
+  <!--HTMLHeader-->
+</head>
+<input id="wikicmds-toggle" type="checkbox"/>
+<body data-group="{$Group}" data-name="{$Name}" data-fullname="{$FullName}">
+  <div id="bodywrap">
+    <input id="wikileft-toggle" type="checkbox"/>
+    <label for="wikileft-toggle" id="wikileft-toggle-label"></label>
+
+    <input id="wikihead-search-toggle" type="checkbox"/>
+    <label for="wikihead-search-toggle" id="wikihead-search-toggle-label"></label>
+
+<!--function:SkinFmt #skinheader {$Group}.SkinElements {$SiteGroup}.SkinElements-->
+<!--PageHeaderFmt-->
+    <header id="wikihead">
+      <div id="wikihead-content">
+        <span id="wikilogo"><a href="{$ScriptUrl}">$WikiTitle</a></span>
+      </div><!--wikiheadcontent-->
+    </header><!--wikihead-->
+<!--/PageHeaderFmt-->
+
+    <div id="wikimid">
+<!--PageLeftFmt-->
+      <nav id="wikisidebar">
+        <div id="wikileft">
+          <!--wiki:{$Group}.SideBar {$SiteGroup}.SideBar-->
+        </div>
+      </nav>
+<!--/PageLeftFmt-->
+
+      <div id="wikibody">
+        <main>
+        
+<!--PageActionFmt-->
+        <label for="wikicmds-toggle" id="wikicmds-toggle-label"></label>
+        <div id='wikicmds'><!--wiki:{$Group}.PageActions {$SiteGroup}.PageActions--></div>
+<!--/PageActionFmt-->
+
+<!--PageTitleFmt-->
+          <div id='wikititle'>
+          
+            <!--markup:(:allegro-pages mode=breadcrumbs:)-->
+            <h1 class='pagetitle'>{$Title}</h1>
+          </div>
+<!--/PageTitleFmt-->
+
+<!--PageText-->
+        </main>
+
+      </div><!--wikibody-->
+
+    </div><!--wikimid-->
+
+<!--function:SkinFmt #skinfooter {$Group}.SkinElements {$SiteGroup}.SkinElements-->
+<!--PageFooterFmt-->
+    <footer id='wikifoot'>
+      <div id="wikifoot-links" class="footnav">
+        <a rel="nofollow" href="{$PageUrl}?action=edit">$[Edit]</a> -
+        <a rel="nofollow" href="{$PageUrl}?action=diff">$[History]</a> -
+        <a rel="nofollow" href="{$PageUrl}?action=print" target="_blank">$[Print]</a> -
+        <a href="{$ScriptUrl}/$[{$Group}/RecentChanges]">$[Recent Changes]</a> -
+        <a href="{$ScriptUrl}/$[{$SiteGroup}/Search]">$[Search]</a>
+      </div>
+      <div id="wikifoot-lastmod" class="lastmod">$[Page last modified on {$LastModified}]</div>
+    </footer>
+<!--/PageFooterFmt-->
+    <div id="wikioverlay"></div>
+  </div><!--bodywrap-->
+
+  <script type='text/javascript' src='$SkinDirUrl/skin.js' async></script>
+
+<!--HTMLFooter-->
+
+</body>
+</html>
+
